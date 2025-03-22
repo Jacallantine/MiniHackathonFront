@@ -10,6 +10,7 @@ module.exports = {
         '800-md': { max: '800px' }, // Applies to screens smaller than 768px
         '1000-md': { max: '1000x' }, 
         '1300-md': { max: '1300px' }, 
+        '700-hmd': {'raw' : '(max-height:700px)'},
       },
     },
   },

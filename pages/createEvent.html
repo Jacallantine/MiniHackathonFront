@@ -57,14 +57,22 @@
 
     <section class=" flex justify-center w-full" >
         <form onsubmit="return false"  class="mt-[3%] flex justify-center items-center h-fit w-fit flex-col px-24 py-16 gap-y-8 1300-md:px-16 1300-md:py-12 1300-md:gap-y-4" id="FormContainer">
-            <h2>Login Portal</h2>
-            <input class="w-[225px]" type="text" placeholder="Email" id="email">
-            <input class="w-[225px]" type="text" placeholder="Password" id="password">
+            <h2>Create Event</h2>
+            <input class="w-[225px]" type="text" placeholder="Event Title" id="eventTitle">
+            <input class="w-[225px]" type="text" placeholder="Event Description" id="eventDesc">
+            
+            <div class="flex flex-col gap-y-4">
+                <label for="eventStartDate">Event Start Date:</label>
+                <input class="w-[225px]" type="datetime-local" id="eventStartDate">
+            <label for="eventEndDate">Event End Date:</label>
+            <input class="w-[225px]" type="datetime-local" id="eventEndDate">
 
+            </div>
+            
             <div class="flex flex-col items-center gap-y-4">
-                <button onclick="Login()" id="" class="LoginButton"><span>Login</span></button>
-                <a href="./createAccount.html">New? Create Account</a>
-                <a href="./recovery.html">Forgot Password?</a>
+                <button onclick="CreateEvent()" id="" class="LoginButton"><span>Create Event</span></button>
+                <!-- <a href="./createAccount.html">New? Create Account</a> -->
+                <!-- <a href="./recovery.html">Forgot Password?</a> -->
             </div>
             
         </form>
@@ -72,7 +80,7 @@
     </section>
 
     <script src="../js/index.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/createEvent.js"></script>
     
 </body>
 </html>

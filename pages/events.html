@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="../src/output.css">
     <link rel="stylesheet" href="../src/index.css">
     <link rel="stylesheet" href="../src/buttons.css">
-    <link rel="stylesheet" href="../src/login.css">
-    <title>Login</title>
+    <title>Hackathon</title>
 </head>
-<body class="h-[100vh] 700-hmd:h-fit">
+<body class=" h-[100vh] [color:white]" >
+
     <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
         <nav class="flex items-center w-full 800-md:hidden ">
             <ul class="flex">
@@ -17,9 +17,9 @@
                     <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
-                <a href="" id="login">
-                    <li id="loginLink">Login</li></a>
-                </a>
+                <a href="./login.html">
+                    <li id="loginLink" >Login</li></a>
+
                 <a href="./team.html">
                     <li>
                         Team
@@ -30,7 +30,6 @@
         </nav>
 
         <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/hamburger.svg" alt="" onclick="ToggleMobile()">
-
         <!-- <button class="hidden 800-md:flex" onclick="ToggleMobile()">Hamburger</button> -->
 
 
@@ -40,39 +39,49 @@
 
     <nav class=" MobileNav  fixed top-[-100%] left-0 z-50 hidden 800-md:flex w-[100vw] h-[100vh] [background-image:url(../assets/mountain.jpg)] items-center justify-center">
 
-        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden "></div>
+        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
         
         <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
-            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='../index.html'">
+
+            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='./index.html'">
             
             
-            <a class="PrimaryButton" href="./login.html"><li>Login</li></a>
-            <a class="PrimaryButton" href="./team.html"><li>Team</li></a>
-            <!-- <a class="PrimaryButton" href="./login.html"><li>Login</li></a> -->
+            <a class="PrimaryButton" href="./pages/login.html"><li>Login</li></a>
+            <a class="PrimaryButton" href="./pages/team.html"><li>Team</li></a>
+            
            
             <button class="" onclick="ToggleMobile()">X</button>
 
         </ul>
     </nav>
 
-    <section class=" flex justify-center w-full" >
-        <form onsubmit="return false"  class="mt-[3%] flex justify-center items-center h-fit w-fit flex-col px-24 py-16 gap-y-8 1300-md:px-16 1300-md:py-12 1300-md:gap-y-4" id="FormContainer">
-            <h2>Login Portal</h2>
-            <input class="w-[225px]" type="text" placeholder="Email" id="email">
-            <input class="w-[225px]" type="text" placeholder="Password" id="password">
 
-            <div class="flex flex-col items-center gap-y-4">
-                <button onclick="Login()" id="" class="LoginButton"><span>Login</span></button>
-                <a href="./createAccount.html">New? Create Account</a>
-                <a href="./recovery.html">Forgot Password?</a>
+    <section class="w-full [color:black] flex flex-col items-center" id="EventContainer">
+
+        <div class=" w-[60%] bg-white px-6 [border-radius:6px] flex flex-col py-2 cursor-pointer" onclick="toggleDiv(this)" id="2">
+            <div class="flex justify-between items-center">
+                <h2 id="eventTitle">This is a test</h2>
+                <img src="../assets/arrow.svg" alt="" class="w-[35px] h-[35px]">
+
             </div>
             
-        </form>
+            <div class="flex flex-col hidden" id="eventDetails">
+            <p id="eventDescription">this is the description</p>
+            <p id="eventTime">Time</p>
+
+            </div>
+            
+        </div>
 
     </section>
 
+        
+    
+
+
+
     <script src="../js/index.js"></script>
-    <script src="../js/login.js"></script>
+    <script src="../js/events.js"></script>
     
 </body>
 </html>

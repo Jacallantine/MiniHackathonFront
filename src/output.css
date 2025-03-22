@@ -578,20 +578,16 @@ video {
   margin-bottom: auto;
 }
 
-.mt-\[12\%\] {
-  margin-top: 12%;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.mt-\[7\%\] {
-  margin-top: 7%;
+.mt-\[3\%\] {
+  margin-top: 3%;
 }
 
 .mt-\[5\%\] {
   margin-top: 5%;
+}
+
+.mt-auto {
+  margin-top: auto;
 }
 
 .flex {
@@ -608,6 +604,10 @@ video {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-\[35px\] {
+  height: 35px;
 }
 
 .h-\[60px\] {
@@ -633,6 +633,14 @@ video {
 
 .w-\[225px\] {
   width: 225px;
+}
+
+.w-\[35px\] {
+  width: 35px;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .w-\[60px\] {
@@ -668,6 +676,10 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-y-12 {
   row-gap: 3rem;
 }
@@ -680,18 +692,22 @@ video {
   row-gap: 1.5rem;
 }
 
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
 }
 
 .px-24 {
@@ -699,19 +715,29 @@ video {
   padding-right: 6rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .px-32 {
   padding-left: 8rem;
   padding-right: 8rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .\[background-color\:rgb\(27\2c 27\2c 27\)\] {
@@ -720,6 +746,14 @@ video {
 
 .\[background-image\:url\(\.\.\/assets\/mountain\.jpg\)\] {
   background-image: url(../assets/mountain.jpg);
+}
+
+.\[border-radius\:6px\] {
+  border-radius: 6px;
+}
+
+.\[color\:black\] {
+  color: black;
 }
 
 .\[color\:white\] {
@@ -743,5 +777,28 @@ video {
   .\38 00-md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .\31 300-md\:gap-y-4 {
+    row-gap: 1rem;
+  }
+
+  .\31 300-md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .\31 300-md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-height:700px) {
+  .\37 00-hmd\:h-fit {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
