@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/buttons.css">
+    <link rel="stylesheet" href="../src/login.css">
+    <title>Login</title>
+</head>
+<body class="h-[100vh]">
+    <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
+        <nav class="flex items-center w-full 800-md:hidden ">
+            <ul class="flex">
+                <a href="../index.html">
+                    <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
+                </a>
+                
+                <a href="./login.html" id="login">
+                    <li>
+                        Login
+                    </li>
+                </a>
+                <a href="./team.html">
+                    <li>
+                        Team
+                    </li>
+                </a>
+            </ul>
+
+        </nav>
+
+        <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/hamburger.svg" alt="" onclick="ToggleMobile()">
+
+        <!-- <button class="hidden 800-md:flex" onclick="ToggleMobile()">Hamburger</button> -->
+
+
+
+    </header>
+
+
+    <nav class=" MobileNav  fixed top-[-100%] left-0 z-50 hidden 800-md:flex w-[100vw] h-[100vh] [background-image:url(../assets/mountain.jpg)] items-center justify-center">
+
+        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden "></div>
+        
+        <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
+            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='../index.html'">
+            
+            
+            <a class="PrimaryButton" href="./login.html"><li>Login</li></a>
+            <a class="PrimaryButton" href="./team.html"><li>Team</li></a>
+            <!-- <a class="PrimaryButton" href="./login.html"><li>Login</li></a> -->
+           
+            <button class="" onclick="ToggleMobile()">X</button>
+
+        </ul>
+    </nav>
+
+    <section class=" flex justify-center w-full" >
+        <form action="" id="LoginForm" class="mt-[12%] flex justify-center items-center h-fit w-fit flex-col px-16 py-12 gap-y-12 " id="FormContainer">
+            <h2>Login Portal</h2>
+            <input class="w-[225px]" type="text" placeholder="Email">
+            <input class="w-[225px]" type="text" placeholder="Password">
+
+            <div class="flex flex-col gap-y-4">
+                <button id="" class="LoginButton"><span>Login</span></button>
+                <a href="./recovery.html">Forgot Password?</a>
+            </div>
+            
+        </form>
+
+    </section>
+
+    <script src="../js/index.js"></script>
+    
+</body>
+</html>

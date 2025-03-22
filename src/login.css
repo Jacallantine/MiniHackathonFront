@@ -1,0 +1,84 @@
+body{
+    height: 100vh;
+    background-image: url("../assets/login.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#login{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+input{
+    border-bottom: 2px solid white;
+    overflow: visible;
+    padding:4px 0;
+    background-color: transparent;
+    position: relative;
+    &::placeholder{
+        position: relative;
+        z-index: 1;
+        transition: 300ms;
+        color: white;
+        overflow: visible;
+
+       
+    }
+
+    &:focus{
+        outline: none;
+
+        &::placeholder{
+            transition: 300ms;
+            transform: translatex(100%);
+        }
+    }
+
+
+}
+
+#FormContainer{
+    position: relative;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        z-index:-1;
+        color: white;
+    }
+
+    & a{
+        color: white;
+        position: relative;
+        &:hover{
+
+        }
+        &::before{
+            content: '';
+            position:absolute;
+            background-color: white;
+            width: 100%;
+            height: 1px;
+            top: 100%;
+            opacity: 0;
+            transition: 300ms;
+            transform: translateY(4px);
+        }
+
+        &:hover::before{
+            transition: 300ms;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+
+    }
+}

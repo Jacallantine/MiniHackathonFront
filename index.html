@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/buttons.css">
+    <title>Hackathon</title>
+</head>
+<body class=" h-[100vh] [color:white]" >
+
+    <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
+        <nav class="flex items-center w-full 800-md:hidden ">
+            <ul class="flex">
+                <a href="./index.html">
+                    <img src="./assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
+                </a>
+                
+                <a href="./pages/login.html">
+                    <li>
+                        Login
+                    </li>
+                </a>
+                <a href="./pages/team.html">
+                    <li>
+                        Team
+                    </li>
+                </a>
+            </ul>
+
+        </nav>
+
+        <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/hamburger.svg" alt="" onclick="ToggleMobile()">
+        <!-- <button class="hidden 800-md:flex" onclick="ToggleMobile()">Hamburger</button> -->
+
+
+
+    </header>
+
+
+    <nav class=" MobileNav  fixed top-[-100%] left-0 z-50 hidden 800-md:flex w-[100vw] h-[100vh] [background-image:url(../assets/mountain.jpg)] items-center justify-center">
+
+        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
+        
+        <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
+
+            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='./index.html'">
+            
+            
+            <a class="PrimaryButton" href="./pages/login.html"><li>Login</li></a>
+            <a class="PrimaryButton" href="./pages/team.html"><li>Team</li></a>
+           
+            <button class="" onclick="ToggleMobile()">X</button>
+
+        </ul>
+    </nav>
+
+        
+    
+
+
+
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
