@@ -13,14 +13,12 @@
     <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
         <nav class="flex items-center w-full 800-md:hidden ">
             <ul class="flex">
-                <a href="../index.html">
+                <a href="./index.html">
                     <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
-                <a href="./login.html" id="login">
-                    <li>
-                        Login
-                    </li>
+                <a href="" id="login">
+                    <li id="loginLink">Login</li></a>
                 </a>
                 <a href="./team.html">
                     <li>
@@ -58,13 +56,14 @@
     </nav>
 
     <section class=" flex justify-center w-full" >
-        <form action="" id="LoginForm" class="mt-[12%] flex justify-center items-center h-fit w-fit flex-col px-16 py-12 gap-y-12 " id="FormContainer">
+        <form onsubmit="return false"  class="mt-[5%] flex justify-center items-center h-fit w-fit flex-col px-24 py-16 gap-y-12 " id="FormContainer">
             <h2>Login Portal</h2>
-            <input class="w-[225px]" type="text" placeholder="Email">
-            <input class="w-[225px]" type="text" placeholder="Password">
+            <input class="w-[225px]" type="text" placeholder="Email" id="email">
+            <input class="w-[225px]" type="text" placeholder="Password" id="password">
 
-            <div class="flex flex-col gap-y-4">
-                <button id="" class="LoginButton"><span>Login</span></button>
+            <div class="flex flex-col items-center gap-y-4">
+                <button onclick="Login()" id="" class="LoginButton"><span>Login</span></button>
+                <a href="./createAccount.html">New? Create Account</a>
                 <a href="./recovery.html">Forgot Password?</a>
             </div>
             
@@ -73,6 +72,7 @@
     </section>
 
     <script src="../js/index.js"></script>
+    <script src="../js/login.js"></script>
     
 </body>
 </html>
