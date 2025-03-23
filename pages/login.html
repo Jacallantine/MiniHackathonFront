@@ -14,15 +14,20 @@
         <nav class="flex items-center w-full 800-md:hidden ">
             <ul class="flex">
                 <a href="./index.html">
-                    <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
+                    <img src="../assets/bama5.png" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
                 <a href="" id="login">
                     <li id="loginLink">Login</li></a>
                 </a>
-                <a href="./team.html">
+                <a href="./events.html">
                     <li>
-                        Team
+                        Events
+                    </li>
+                </a>
+                <a href="./createEvent.html" id="createEvent">
+                    <li>
+                        Create Event
                     </li>
                 </a>
             </ul>
@@ -40,15 +45,21 @@
 
     <nav class=" MobileNav  fixed top-[-100%] left-0 z-50 hidden 800-md:flex w-[100vw] h-[100vh] [background-image:url(../assets/mountain.jpg)] items-center justify-center">
 
-        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden "></div>
+        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
         
         <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
-            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='../index.html'">
+
+            <a href="./index.html">
+        <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/bama5.png" alt="" onclick="window.location.href='./index.html'">
+           
+
+            </a>
             
             
-            <a class="PrimaryButton" href="./login.html"><li>Login</li></a>
-            <a class="PrimaryButton" href="./team.html"><li>Team</li></a>
-            <!-- <a class="PrimaryButton" href="./login.html"><li>Login</li></a> -->
+            <a class="PrimaryButton" href="./login.html" id="login"><li id="loginLinkM">Login</li></a>
+            <a class="PrimaryButton" href="./events.html"><li id="loginLinkM">Events</li></a>
+            <a class="PrimaryButton" href="./createEvent.html"><li>Create Event</li></a>
+
            
             <button class="" onclick="ToggleMobile()">X</button>
 
@@ -61,10 +72,10 @@
             <input class="w-[225px]" type="text" placeholder="Email" id="email">
             <input class="w-[225px]" type="text" placeholder="Password" id="password">
 
-            <div class="flex flex-col items-center gap-y-4">
+            <div class="flex flex-col items-center gap-y-4 w-full">
                 <button onclick="Login()" id="" class="LoginButton"><span>Login</span></button>
                 <a href="./createAccount.html">New? Create Account</a>
-                <a href="./recovery.html">Forgot Password?</a>
+                <!-- <a href="./recovery.html">Forgot Password?</a> -->
             </div>
             
         </form>

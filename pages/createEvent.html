@@ -7,29 +7,38 @@
     <link rel="stylesheet" href="../src/index.css">
     <link rel="stylesheet" href="../src/buttons.css">
     <link rel="stylesheet" href="../src/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="../src/createEvent.css">
+    <title>Create Event</title>
 </head>
 <body class="h-[100vh] 700-hmd:h-fit">
     <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
         <nav class="flex items-center w-full 800-md:hidden ">
             <ul class="flex">
                 <a href="./index.html">
-                    <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
+                    <img src="../assets/bama5.png" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
                 <a href="" id="login">
                     <li id="loginLink">Login</li></a>
                 </a>
-                <a href="./team.html">
+                <a href="./events.html">
                     <li>
-                        Team
+                        Events
+                    </li>
+                </a>
+                <a href="./createEvent.html">
+                    <li>
+                        Create Event
                     </li>
                 </a>
             </ul>
 
         </nav>
+        <div class="flex justify-between w-full px-4 hidden 800-md:flex">
+            <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/hamburger.svg" alt="" onclick="ToggleMobile()">
+            <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/bama5.png" alt="" onclick="window.location.href ='./index.html'">
+        </div>
 
-        <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/hamburger.svg" alt="" onclick="ToggleMobile()">
 
         <!-- <button class="hidden 800-md:flex" onclick="ToggleMobile()">Hamburger</button> -->
 
@@ -40,15 +49,21 @@
 
     <nav class=" MobileNav  fixed top-[-100%] left-0 z-50 hidden 800-md:flex w-[100vw] h-[100vh] [background-image:url(../assets/mountain.jpg)] items-center justify-center">
 
-        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden "></div>
+        <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
         
         <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
-            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='../index.html'">
+
+            <a href="./index.html">
+        <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/bama5.png" alt="" onclick="window.location.href='./index.html'">
+           
+
+            </a>
             
             
-            <a class="PrimaryButton" href="./login.html"><li>Login</li></a>
-            <a class="PrimaryButton" href="./team.html"><li>Team</li></a>
-            <!-- <a class="PrimaryButton" href="./login.html"><li>Login</li></a> -->
+            <a class="PrimaryButton" href="" id="login"><li id="loginLinkM">Login</li></a>
+            <a class="PrimaryButton" href="./events.html"><li id="loginLinkM">Events</li></a>
+            <a class="PrimaryButton" href="./createEvent.html"><li>Create Event</li></a>
+
            
             <button class="" onclick="ToggleMobile()">X</button>
 
@@ -56,18 +71,50 @@
     </nav>
 
     <section class=" flex justify-center w-full" >
-        <form onsubmit="return false"  class="mt-[3%] flex justify-center items-center h-fit w-fit flex-col px-24 py-16 gap-y-8 1300-md:px-16 1300-md:py-12 1300-md:gap-y-4" id="FormContainer">
+        <form onsubmit=""  class="mt-[3%] flex justify-center items-center h-fit w-fit flex-col px-24 py-16 gap-y-12 1300-md:px-16 1300-md:py-12 1300-md:gap-y-8 gap-x-4" id="FormContainer">
             <h2>Create Event</h2>
-            <input class="w-[225px]" type="text" placeholder="Event Title" id="eventTitle">
-            <input class="w-[225px]" type="text" placeholder="Event Description" id="eventDesc">
-            
-            <div class="flex flex-col gap-y-4">
-                <label for="eventStartDate">Event Start Date:</label>
-                <input class="w-[225px]" type="datetime-local" id="eventStartDate">
-            <label for="eventEndDate">Event End Date:</label>
-            <input class="w-[225px]" type="datetime-local" id="eventEndDate">
+            <div class="flex gap-x-4 800-md:flex-col 800-md:gap-y-4">
+                <input class="w-[225px]" type="text" placeholder="Event Title" id="eventTitle">
+                <input class="w-[225px]" type="text" placeholder="Event Description" id="eventDesc">
 
             </div>
+            
+            <div class="flex items-end gap-x-4 800-md:flex-col 800-md:gap-y-4">
+
+                <div class="flex flex-col">
+                    <label for="eventStartDate">Event Start Date:</label>
+                    <input class="w-[225px]" type="datetime-local" id="eventStartDate">
+
+                </div>
+
+                    <div class="flex flex-col">
+                    <label for="eventEndDate">Event End Date:</label>
+                    <input class="w-[225px]" type="datetime-local" id="eventEndDate">
+
+                    </div>
+                    
+             
+
+            </div>
+
+            <div class="flex w-full 800-md:flex-col 800-md:gap-y-4">
+
+                <input  class="w-[225px]" type="text" placeholder="Redirect Link" id="redirectLink">
+
+            <div class="flex justify-center items-center gap-x-4 w-full ">
+            <label for="">Select Category:</label>
+            <select id="program" class="bg-gray-800 text-white py-2 px-4 rounded w-[100px] mx=[auto] cursor-pointer">
+                <option value="ALL">ALL</option>
+                <option value="MIS">MIS</option>
+                <option value="WIT">WIT</option>
+                <option value="CS">CS</option>
+            </select>
+
+            </div>
+
+            </div>
+          
+            
             
             <div class="flex flex-col items-center gap-y-4">
                 <button onclick="CreateEvent()" id="" class="LoginButton"><span>Create Event</span></button>
@@ -81,6 +128,7 @@
 
     <script src="../js/index.js"></script>
     <script src="../js/createEvent.js"></script>
+
     
 </body>
 </html>

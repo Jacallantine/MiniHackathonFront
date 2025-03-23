@@ -1,0 +1,41 @@
+.animateArrowDown{
+    transform: rotate(90deg);
+    transition: 150ms;
+}
+
+.animateArrowRight{
+    transform: rotate(0deg);
+    transition: 150ms;
+}
+
+.eventDiv{
+    width: clamp(400px, 1100px, 80%);
+    transition: 300ms;
+    & h2{
+        font-size: 32px;
+    }
+    &:hover{
+        transition: 300ms;
+        color: white;
+        background-color: rgba(158, 27, 50, 0.9);
+
+        & img{
+            filter: brightness(0) invert(1); 
+        }
+    }
+}
+
+#FilterContainer, #FilterContainerM{
+    width: clamp(75px, 300px, 40%);
+}
+
+.arrow{
+    width: 35px;
+    height: 35px;
+}
+
+
+#FilterContainerM{
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}

@@ -17,13 +17,8 @@
                     <img src="../assets/rocket.svg" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
-                <a href="./login.html">
+                <a href="">
                     <li id="loginLink">Login</li></a>
-                </a>
-                <a href="./team.html">
-                    <li>
-                        Team
-                    </li>
                 </a>
             </ul>
 
@@ -42,9 +37,18 @@
         <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 hidden"></div>
         
         <ul class="MobileNavUl flex flex-col items-center justify-center gap-y-6">
-            <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='../index.html'">
-            <a class="PrimaryButton" href="./login.html"><li>Login</li></a>
-            <a class="PrimaryButton" href="./team.html"><li>Team</li></a>
+
+            <a href="./index.html">
+        <img class="w-[100px] h-[100px] cursor-pointer" src="../assets/rocket.svg" alt="" onclick="window.location.href='./index.html'">
+           
+
+            </a>
+            
+            
+            <a class="PrimaryButton" href="./login.html" id="login"><li id="loginLinkM">Login</li></a>
+            <a class="PrimaryButton" href="./events.html"><li id="loginLinkM">Events</li></a>
+            <a class="PrimaryButton" href="./createEvent.html"><li>Create Event</li></a>
+
            
             <button class="" onclick="ToggleMobile()">X</button>
 

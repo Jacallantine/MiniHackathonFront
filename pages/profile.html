@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <link rel="stylesheet" href="../src/buttons.css">
-    <link rel="stylesheet" href="../src/events.css">
-    <link rel="stylesheet" href="../src/index.css">
     <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/buttons.css">
+    <link rel="stylesheet" href="../src/profile.css">
     <title>Hackathon</title>
 </head>
-<body class=" h-fit [color:white]" >
+<body class=" h-[100vh] [color:white]" >
 
     <header class="flex  px-24 w-full h-[100px] [background-color:rgb(27,27,27)] 800-md:px-0">
         <nav class="flex items-center w-full 800-md:hidden ">
@@ -20,18 +18,13 @@
                     <img src="../assets/bama5.png" alt="This is the home button and looks like a rocket ship" class="w-[60px] h-[60px]">
                 </a>
                 
-                <a href="./login.html" id="login">
-                    <li id="loginLink" >Login</li></a>
-
+                <a href="">
+                    <li id="loginLink">Login</li></a>
                 <a href="./events.html">
-                    <li>
-                        Events
-                    </li>
+                    <li>Events</li>
                 </a>
                 <a href="./createEvent.html" id="createEvent">
-                    <li>
-                        Create Event
-                    </li>
+                    <li>Create Event</li>
                 </a>
             </ul>
 
@@ -42,7 +35,6 @@
             <img class="  cursor-pointer w-[70px] h-[70px] hidden 800-md:flex mt-auto mb-auto" src="../assets/bama5.png" alt="" onclick="window.location.href ='./index.html'">
         </div>
 
-        <!-- <button class="hidden 800-md:flex" onclick="ToggleMobile()">Hamburger</button> -->
 
 
 
@@ -73,31 +65,24 @@
     </nav>
 
 
-    <section class="w-full h-[100vh] [color:black] flex 800-md:justify-start 800-md:items-center gap-y-4 800-md:flex-col">
+    <section class="flex justify-center  h-[90%] w-full" id="">
 
-        <div class="w-[10%] text-white flex flex-col items-center bg-[#9E1B32] py-24 gap-y-4 800-md:hidden"  id="FilterContainer">
-            <h2 class="[font-size:32px]">Filter</h2>
-            <select id="program" class="bg-white text-black py-2 px-4 rounded w-[80%] cursor-pointer">
-                <option class="cursor-pointer" value="ALL">ALL</option>
-                <option class="cursor-pointer" value="MIS">MIS</option>
-                <option class="cursor-pointer" value="WIT">WIT</option>
-                <option class="cursor-pointer" value="CS">CS</option>
-            </select>
-            
-        </div>
 
-        <div class=" hidden w-[10%] text-white flex flex-col items-center bg-[#9E1B32] py-4 gap-y-4 800-md:flex"  id="FilterContainerM">
-            <h2 class="[font-size:20px]">Filter</h2>
-            <select id="programM" class="bg-white text-black py-2 px-4 rounded w-[80%] cursor-pointer">
-                <option class="cursor-pointer" value="ALL">ALL</option>
-                <option class="cursor-pointer" value="MIS">MIS</option>
-                <option class="cursor-pointer" value="WIT">WIT</option>
-                <option class="cursor-pointer" value="CS">CS</option>
-            </select>
-            
-        </div>
-        <div class="w-[80%] flex flex-col items-center gap-y-4 justify-center 800-md:justify-start h-fit py-32 800-md:py-4" id="EventContainer">
-        </div>
+            <div id="FormContainer" class="h-fit mt-[5%]">
+                <form action="return false" class="flex flex-col gap-y-4 px-24 py-16 items-center bg-slate-400" id="upDate">
+                    <h2>Update Account</h2>
+
+            <input class="w-[225px]" type="text" placeholder="First Name">
+            <input class="w-[225px]" type="text" placeholder="Last Name">
+            <input class="w-[225px]" type="text" placeholder="Email">
+            <input class="w-[225px]" type="text" placeholder="Password">
+            <input class="w-[225px]" type="text" placeholder="University">
+            <button class="LoginButton" onclick="upDate()">Update</button>
+                </form>
+
+            </div>
+        
+
 
 
     </section>
@@ -107,9 +92,8 @@
 
 
 
-    
-    <script src="../js/events.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/profile.js"></script>
     
 </body>
 </html>
